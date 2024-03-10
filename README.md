@@ -34,12 +34,15 @@ Read the contents of the file given by file_name.
 Decode the contents of the file using the engine BASE64_STANDARD.
 Return the decoded bytes.
 keygen
+
 fn keygen() -> ([u8; 32], [u8; 32])
 Generate a StaticSecret from random.
 Generate a PublicKey from this StaticSecret.
 Convert the secret and public keys to bytes.
 Return a tuple of the secret key bytes and public key bytes.
 encrypt
+
+
 fn encrypt(input: Vec<u8>, sender_sk: [u8; 32], receiver_pk: [u8; 32]) -> Vec<u8>
 Convert the sender secret key array into a StaticSecret.
 Convert the receiver public key array into a PublicKey.
@@ -50,6 +53,8 @@ Generate a random nonce for AES-256-GCM.
 Encrypt the input under the AES-256-GCM key and nonce.
 Append the nonce to the end of the output vector containing the ciphertext.
 Return the vector of bytes containing the ciphertext and the nonce.
+
+
 decrypt
 fn decrypt(input: Vec<u8>, receiver_sk: [u8; 32], sender_pk: [u8; 32]) -> Vec<u8>
 Convert the receiver secret key array into a StaticSecret.
@@ -61,6 +66,7 @@ Extract the ciphertext and the nonce from input. The last 12 bytes of input cont
 Decrypt the ciphertext using the AES-256-GCM key and nonce.
 Return the vector of bytes containing the plaintext data.
 Command-line interface
+
 The main() function in the code handles command parsing and calling functions. You may not modify this function. The different commands supported by the command-line interface are below. Take a look through the code to see how main() handles each command.
 
 cargo run keygen <secret_key> <public_key>
