@@ -21,10 +21,11 @@ git stash pop
 ```
 ### Dependencies and crates
 
-To implement the above functions, you will need to use external crates. You are allowed to only use the crates that are listed in Cargo.toml. You may not add new crates as dependencies. Here are links to the documentation pages for each of the crates used:
 
-x25519-dalek for Diffie-Hellman key exchange
-sha2 for SHA-256 hashing
-aes_gcm for AES-256-GCM authenticated encryption
-base64 for Base64 encoding and decoding
-The documentation for all of these crates is quite good, and will be critical as you implement the functions in this code.
+Use only the crates listed in Cargo.toml. Here are the primary crates required:
+
+x25519-dalek for Diffie-Hellman key exchange.
+sha2 for SHA-256 hashing.
+aes_gcm for AES-256-GCM authenticated encryption.
+base64 for Base64 encoding and decoding.
+Refer to the documentation of these crates as needed.
