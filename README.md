@@ -74,7 +74,7 @@ The Base64 content in b_pk.txt corresponds to the following bytes:
 
 Remember, Diffie-Hellman keys are randomly generated, so your implementation will generate different keys.
 ```
-########## Example 1
+#### Example 1
 
 Example 1 was generated with A as the sender and B as the receiver. Encrypt and decrypt the file using the following commands:
 
@@ -94,7 +94,7 @@ The Base64-encoded version of the key used for encryption/decryption (SHA-256 ha
 
 Note that due to randomly generated nonces, your encryption function's example1_enc.txt may differ from the repository's, but the shared secret remains the same.
 
-########## Example 2
+#### Example 2
 Example 2 was generated with B as the sender and A as the receiver. Encrypt and decrypt the file using the following commands:
 
 ```bash
